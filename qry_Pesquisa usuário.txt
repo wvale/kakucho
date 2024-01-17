@@ -1,0 +1,9 @@
+SELECT * 
+		FROM usuario
+		WHERE nome_usuario = 'wvale' AND senha_usuario = 'vale2000' AND situacao_usuario = 1
+		LIMIT 1
+
+
+update usuario
+set situacao_usuario = 1
+WHERE nome_usuario = 'wvale' AND senha_usuario = 'vale2000'

@@ -1,0 +1,39 @@
+select Templo,Cargo1,Nome,Sobrenome,DataNasc,Sexo,Foneres,Fonecel,DataFalec,Profissao,eMail,DataConv,Padrinho,DataDeslig,OBS,FielMantenedor,Regiao,Grupo,Endereco,Numero,Complemento,Bairro,Cidade,Estado,Cep,EmiteEtiqueta,'S',EstadoCivil,Departamento,NomeSocial,ChefeFam,Codigo,DataInclusao
+from fieltmp
+where codigo = 1
+
+SELECT codigo,`id_profissao_fiel`,`Profissao` 
+FROM `fieltmp` 
+WHERE Profissao is not null
+and id_profissao_fiel is null
+
+
+update fieltmp tmp set id_profissao_fiel = 8
+where Codigo = 93
+
+update fieltmp tmp 
+set id_profissao_fiel = ull
+where 1
+
+update fieltmp tmp set id_profissao_fiel = 9 where Codigo = 96;
+update fieltmp tmp set id_profissao_fiel = 12 where Codigo = 99;
+update fieltmp tmp set id_profissao_fiel = 23 where Codigo = 157;
+update fieltmp tmp set id_profissao_fiel = 24 where Codigo = 158;
+update fieltmp tmp set id_profissao_fiel = 24 where Codigo = 159;
+update fieltmp tmp set id_profissao_fiel = 9 where Codigo = 161;
+update fieltmp tmp set id_profissao_fiel = 32 where Codigo = 183;
+update fieltmp tmp set id_profissao_fiel = 34 where Codigo = 187;
+update fieltmp tmp set id_profissao_fiel = 39 where Codigo = 213;
+update fieltmp tmp set id_profissao_fiel = 43 where Codigo = 228;
+update fieltmp tmp set id_profissao_fiel = 51 where Codigo = 262;
+update fieltmp tmp set id_profissao_fiel = 15 where Codigo = 264;
+update fieltmp tmp set id_profissao_fiel = 53 where Codigo = 270;
+update fieltmp tmp set id_profissao_fiel = 54 where Codigo = 271;
+update fieltmp tmp set id_profissao_fiel = 55 where Codigo = 272;
+update fieltmp tmp set id_profissao_fiel = 58 where Codigo = 275;
+update fieltmp tmp set id_profissao_fiel = 23 where Codigo = 308;
+
+select Templo,id_cargo,Nome,Sobrenome,DataNasc,Sexo,Foneres,Fonecel,DataFalec,id_profissao_fiel,eMail,DataConv,Padrinho,DataDeslig,OBS,FielMantenedor,Regiao,id_grupo,Endereco,Numero,Complemento,Bairro,Cidade,Estado,Cep,EmiteEtiqueta,'S',EstadoCivil,Departamento,NomeSocial,ChefeFam,Codigo,DataInclusao
+from fieltmp
+where codigo = 2
+

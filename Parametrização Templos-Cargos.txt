@@ -1,0 +1,16 @@
+Templos
+1 Nikkyoji
+2 Taissenji
+3 Hompoji
+4 Ryushoji
+5 Nissenji
+
+Cargos
+1 Sacerdote
+2 Chefe de Grupo
+3 Bispo
+4 Bispo Superior
+5 Gakuto
+6 Okusan
+7 Presidente do Templo
+8 Arcebispo

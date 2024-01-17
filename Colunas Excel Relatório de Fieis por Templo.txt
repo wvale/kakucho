@@ -1,0 +1,29 @@
+Nome do Fiel
+Sobrenome
+Nome Social
+Templo
+Grupo 
+Cargo HBS 
+Departamento HBS
+Data de Nascimento
+Gênero
+Telefone Residêncial
+Celular
+Data de Falecimento
+E-mail
+Data de Conversão
+Padrinho/Madrinha
+Desligamento na HBS
+Endereço
+Número
+Complemento
+Bairro
+Cidade
+Estado
+CEP
+Emite Etiqueta
+Estado Civil
+Chefe de Família
+Data de Cadastramento no Sistema
+Última Alteração no Sistema
+Observação

@@ -1,0 +1,8 @@
+DELIMITER $$
+ 
+CREATE PROCEDURE Selecionar_Produtos(IN quantidade INT)
+BEGIN
+    SELECT * FROM PRODUTOS
+    LIMIT quantidade;
+END $$
+DELIMITER ;

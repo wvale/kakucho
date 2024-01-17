@@ -1,0 +1,3 @@
+CREATE PROCEDURE `sp_inclui_fiel_cargo`(IN `templo` INT, IN `departamento` INT, IN `cargo` INT, IN `fiel` INT, IN `datai2` DATE, IN `dataf2` DATE) 
+	COMMENT 'Inclui Cargos de Fieis no Templo' NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER 
+	select 1

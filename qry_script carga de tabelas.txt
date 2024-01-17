@@ -1,0 +1,19 @@
+Templo
+INSERT INTO `siste075_hbs`.`templo` (`id_templo`, `nome_templo`, `situacao_templo`, `cnpj_templo`, `email_templo`, `telefone_templo`, `ramal_templo`, `fax_templo`, `matriz_templo`, `endereco_templo`, `numero_templo`, `complemento_templo`, `bairro_templo`, `cidade_templo`, `uf_templo`, `cep_templo`, `cx_postal_templo`) VALUES (NULL, 'Nissenji', 'A', '0', '.', '0', '0', NULL, 'M', '.', '0', '.', '.', '.', 'SP', '', '.0');
+
+UPDATE  `siste075_hbs`.`templo` SET  `uf_templo` =  'PR' WHERE  `templo`.`id_templo` =3;
+
+Profissão Fiel
+INSERT INTO `siste075_hbs`.`profissao_fiel` (`id_profissao_fiel`, `nome_profissao_fiel`, `situacao_fiel`) VALUES (NULL, 'Sacerdote', 'A');
+
+Fiel
+INSERT INTO `siste075_hbs`.`fiel` (`id_fiel`, `id_templo`, `nome_fiel`, `sobrenome_fiel`, `data_nascimento_fiel`, `genero_fiel`, `rg_fiel`, `data_emissao_rg_fiel`, `orgao_emissor_rg`, `cpf_fiel`, `tel_residencial_fiel`, `tel_comercial_fiel`, `ramal_fiel`, `tel_celular_fiel`, `data_falecimento_fiel`, `id_profissao_fiel`, `email_fiel`, `data_conversao_fiel`, `padrinho_madrinha_fiel`, `data_desligamento_fiel`, `observacao_fiel`, `situacao_fiel`)
+VALUES (NULL, '4', 'Myouyou Yoshikawa', NULL, '11/11/1111', 'M', '0', '11/11/1111', ',', '0', '0', '0', '0', '0', '11/11/1111', '0', '.', '11/11/1111', '.', NULL, 'Preencher dados que estão em branco', 'A');
+
+
+update `siste075_hbs`.`fiel`
+set 
+
+
+Cargo
+INSERT INTO `siste075_hbs`.`cargo` (`id_cargo`, `nome_cargo`, `situacao_cargo`) VALUES (NULL, 'Arcebispo', 'A');

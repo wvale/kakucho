@@ -1,0 +1,9 @@
+select fil.id_fiel, fil.nome_fiel,
+(select man.`situacao_fiel` from fiel_mantenedor man 
+ where man.id_fiel = fil.id_fiel 
+ and man.id_templo = fil.id_templo
+ and man.Ano_Fiel_Mantenedor = year(now()) -1
+)
+as situacao_fiel
+from fiel fil
+where fil.id_fiel = 13491

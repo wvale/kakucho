@@ -1,0 +1,5 @@
+insert into estado_civil(nome_estado_civil) values('Solteiro(a)');
+insert into estado_civil(nome_estado_civil) values('Casado(a)');
+insert into estado_civil(nome_estado_civil) values('Separado(a)');
+insert into estado_civil(nome_estado_civil) values('Divorciado(a)');
+insert into estado_civil(nome_estado_civil) values('União Estável');

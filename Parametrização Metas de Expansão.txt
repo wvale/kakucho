@@ -1,0 +1,12 @@
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,2,5,15,300,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,1,20,80,1000,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,5,6,17,360,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,4,10,55,1500,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,9,4,16,160,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,3,9,30,900,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,18,4,14,140,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,22,7,16,170,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,21,2,4,40,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,8,4,14,300,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,20,2,10,300,'A');
+insert into metasexpansao(ano_meta, id_templo, ostentacao, conversoes, visitas, situacao_meta) VALUES (2019,19,5,20,200,'A');

@@ -1,0 +1,1 @@
+alter table fiel modify `nome_fiel` VARCHAR(50);

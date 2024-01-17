@@ -1,0 +1,3 @@
+select (select id_cargo from cargo car where car.nome_cargo=tmp.Cargo1) as id_cargo
+from fieltmp tmp
+where codigo = 2

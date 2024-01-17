@@ -1,0 +1,15 @@
+SELECT id_templo,id_regiao, nome_regiao FROM regiao where nome_regiao = '0';
+
+SELECT reg.id_templo, tem.nome_templo, reg.id_regiao, reg.nome_regiao FROM regiao reg
+inner join templo tem on tem.id_templo = reg.id_templo
+where reg.nome_regiao = '0';
+
+update regiao
+set participa_calculo = 'N'
+where nome_regiao = '0'
+and registro_ativo = 'S';
+
+update regiao
+set participa_calculo = 'S'
+where nome_regiao <> '0'
+and registro_ativo = 'S';

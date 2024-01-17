@@ -1,0 +1,7 @@
+alter table usuario add ativacao_usuario INT(11) DEFAULT 0 COMMENT 'Código de Ativação do Usuário';
+alter table usuario add aplicativo_usuario char(1) DEFAULT 'N' COMMENT 'Acesso ao Aplicativo(S/N)';
+alter table usuario add ip_usuario char(15) NULL DEFAULT NULL COMMENT 'Acesso ao Aplicativo(S/N)';
+
+SELECT  sha1(md5('vale2000'))
+
+

@@ -1,0 +1,12 @@
+select a.`id_fiel`, a.`nome_fiel`, b.`id_fiel`, b.`nome_fiel` 
+from fiel AS a, fiel AS b 
+where a.`nome_fiel`= b.`nome_fiel` 
+and a.`id_fiel` < b.`id_fiel` 
+and a.`id_templo` = 20 
+
+
+DELETE a FROM fiel AS a, fiel AS b 
+WHERE a.`nome_fiel`= b.`nome_fiel` 
+and a.`id_fiel` < b.`id_fiel` 
+and a.`id_templo` = 20 
+and b.`id_templo` = 20;

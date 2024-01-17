@@ -1,0 +1,3 @@
+ALTER DATABASE `siste075_hbs` CHARSET = Latin1 COLLATE = latin1_swedish_ci;
+
+ALTER DATABASE `siste075_hbs` CHARSET = utf8 COLLATE utf8_general_ci;

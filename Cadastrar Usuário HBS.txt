@@ -1,0 +1,2 @@
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario,id_regiao,id_grupo)
+values ('hbs.jyoushou.presidente@gmail.com','Presidente Jyoushou',md5('goho0736'),1,CURRENT_TIMESTAMP,3,8,' ',1,2);

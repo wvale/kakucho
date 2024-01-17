@@ -1,0 +1,71 @@
+select fil.id_templo,tml.nome_templo ,fil.id_regiao,reg.nome_regiao, fil.nome_fiel, fil.nomesocial, fil.logradouro_endereco, fil.numero_endereco, fil.complemento_endereco, fil.bairro_endereco, fil.cidade_endereco, fil.cidade_endereco, fil.uf_endereco, fil.cep_endereco, fil.emite_etiqueta, fil.DataAlteracao, fil.situacao_fiel, tel_residencial_fiel, tel_celular_fiel
+from fiel fil inner join templo tml on tml.id_templo = fil.id_templo
+left join regiao reg on reg.id_regiao = fil.id_regiao
+where fil.id_templo = 1
+and   fil.registro_ativo = 'S'
+and   reg.participa_calculo = 'S';
+
+Calcula Fieis Ativos no Sistema HBS (oficial)
+select count(*) as total_fieis_hbs
+from fiel fil inner join templo tml on tml.id_templo = fil.id_templo
+left join regiao reg on reg.id_regiao = fil.id_regiao
+where fil.registro_ativo = 'S'
+and   reg.participa_calculo = 'S';
+
+
+Calcula Total de Conversões por fiel
+select tml.nome_templo,fil.nome_fiel, data_conversao_fiel
+from fiel fil inner join templo tml on tml.id_templo = fil.id_templo
+left join regiao reg on reg.id_regiao = fil.id_regiao
+where fil.registro_ativo = 'S'
+and   year(data_conversao_fiel) = 2019
+and   reg.participa_calculo = 'S'
+order by tml.nome_templo;
+
+
+Calcula Total de Conversões na HBS (Oficial)
+*fazer query's separadas
+select count(*) total_conversoes, sum(meta.conversoes), round(((count(*)/sum(meta.conversoes))*100),2)
+from fiel fil
+left join regiao reg on reg.id_regiao = fil.id_regiao
+,metasexpansao meta
+where fil.registro_ativo = 'S'
+and   year(data_conversao_fiel) = year(now())
+and   reg.participa_calculo = 'S'
+
+--------------------
+select ount(*) total_conversoes, sum(meta.conversoes), round(((count(*)/sum(meta.conversoes))*100),2)
+from fiel fil inner join templo tml on tml.id_templo = fil.id_templo
+left join regiao reg on reg.id_regiao = fil.id_regiao
+left join metasexpansao meta on meta.id_templo = tml.id_templo
+where fil.registro_ativo = 'S'
+and   year(data_conversao_fiel) = year(now())
+and   reg.participa_calculo = 'S'
+
+
+Calcula Total de Conversões por templos (Oficial)
+select tml.nome_templo, count(*) total_conversoes, meta.conversoes, round(((count(*)/meta.conversoes)*100),2) as perc_realizado
+from fiel fil inner join templo tml on tml.id_templo = fil.id_templo
+left join regiao reg on reg.id_regiao = fil.id_regiao
+left join metasexpansao meta on meta.id_templo = tml.id_templo
+where fil.registro_ativo = 'S'
+and   year(data_conversao_fiel) = year(now())
+and   reg.participa_calculo = 'S'
+group by tml.nome_templo
+order by tml.nome_templo;
+
+Calcula Ostentação de Gohozon (Oficial)
+select tml.nome_templo, count(*) total_ostentacao, meta.ostentacao, round(((count(*)/meta.ostentacao)*100),2) as perc_realizado
+from fiel_gohonzon goh
+inner join fiel fil on fil.id_fiel = goh.id_fiel
+left join  templo tml on tml.id_templo = fil.id_templo
+left join metasexpansao meta on meta.id_templo = tml.id_templo
+where year(data_ostentacao) = year(now())
+group by tml.nome_templo
+order by tml.nome_templo;
+
+
+
+
+
+

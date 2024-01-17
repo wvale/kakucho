@@ -1,0 +1,23 @@
+select fil.id_fiel, fil.nome_fiel,
+(select DATE_FORMAT(filgoh.data_ostentacao,'%d-%m-%Y') from fiel_gohonzon filgoh inner join gohonzon goh on filgoh.id_gohonzon = goh.id_gohonzon
+where filgoh.id_fiel = fil.id_fiel and filgoh.id_gohonzon = 1) as ostentacao_nominal,
+(select DATE_FORMAT(filgoh.data_ostentacao,'%d-%m-%Y') from fiel_gohonzon filgoh inner join gohonzon goh on filgoh.id_gohonzon = goh.id_gohonzon
+where filgoh.id_fiel = fil.id_fiel and filgoh.id_gohonzon = 2) as ostentacao_comercial,
+(select DATE_FORMAT(filgoh.data_ostentacao,'%d-%m-%Y') from fiel_gohonzon filgoh inner join gohonzon goh on filgoh.id_gohonzon = goh.id_gohonzon
+where filgoh.id_fiel = fil.id_fiel and filgoh.id_gohonzon = 3) as ostentacao_expansao,
+(select DATE_FORMAT(filgoh.data_ostentacao,'%d-%m-%Y') from fiel_gohonzon filgoh inner join gohonzon goh on filgoh.id_gohonzon = goh.id_gohonzon
+where filgoh.id_fiel = fil.id_fiel and filgoh.id_gohonzon = 4) as ostentacao_cumieira,
+(select DATE_FORMAT(filgoh.data_ostentacao,'%d-%m-%Y') from fiel_gohonzon filgoh inner join gohonzon goh on filgoh.id_gohonzon = goh.id_gohonzon
+where filgoh.id_fiel = fil.id_fiel and filgoh.id_gohonzon = 5) as ostentacao_protetor
+from fiel fil
+where fil.id_fiel = 13491
+
+
+1-nominal
+2-comercial
+3-expansao
+4-cumieira
+5-protetor
+
+
+13491

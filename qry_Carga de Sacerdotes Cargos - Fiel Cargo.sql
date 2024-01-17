@@ -1,0 +1,78 @@
+-- Qry Carrega Sacerdotes
+insert into fiel_cargo (id_fiel,id_cargo,situacao_fiel_cargo)
+select fil.id_fiel,fil.id_cargo, 'A' from `fiel` fil
+inner join cargo car
+on fil.id_cargo = car.id_cargo
+where car.nome_cargo in('Sacerdote',
+'Bispo',
+'Bispo Superior',
+'Arcebispo'
+)
+and not EXISTS(select fic.id_fiel from fiel_cargo fic where fic.id_fiel=fil.id_fiel)
+--- Fim Qry
+
+insert into fiel_cargo (id_fiel,id_cargo,situacao_cargo)
+select fil.id_fiel,fil.id_cargo, 'A' from fiel_cargo fic inner join fiel fil on fic.id_fiel=fil.id_fiel
+where fil.id_cargo>0
+and fic.id_fiel not in(EXISTS(select fil2.id_fiel from fiel fil2
+                                                    inner join cargo car
+                                                    on fil2.id_cargo = car.id_cargo
+                                                    where car.nome_cargo in('Sacerdote',
+                                                    'Bispo',
+                                                    'Bispo Superior',
+                                                    'Arcebispo'
+                                                    )
+))
+
+
+
+
+insert into fiel_cargo (id_fiel,id_cargo,situacao_cargo)
+select id_fiel,id_cargo, 'A' from `fiel`
+
+
+
+select fil.id_fiel,fil.id_cargo, 'A' from `fiel` fil
+inner join cargo car
+on fil.id_cargo = car.id_cargo
+where car.nome_cargo in('Sacerdote',
+'Bispo',
+'Bispo Superior',
+'Arcebispo'
+)
+and not EXISTS(select fic.id_fiel from fiel_cargo fic inner join fiel on fic.id_fiel=fil.id_fiel
+               )
+			   
+			   
+select fil.id_fiel from fiel_cargo fic inner join fiel fil on fic.id_fiel=fil.id_fiel               
+
+select fil.id_fiel,fil.nome_fiel from fiel_cargo fic inner join fiel fil on fic.id_fiel=fil.id_fiel
+where not EXISTS(select fic2.id_fiel from fiel_cargo fic2 where fic2.id_fiel = fil.id_fiel)
+
+select fic.id_fiel from fiel_cargo fic 
+where EXISTS(select fil.id_fiel from fiel fil where fil.id_fiel=fic.id_fiel)
+
+select fil.id_fiel,fil.id_cargo, 'A' from `fiel` fil 
+where fil.id_fiel in(not exists(select fic.id_fiel from fiel_cargo fic where fic.id_fiel = fil.id_fiel))
+
+
+select fil.id_fiel,fil.nome_fiel from fiel_cargo fic inner join fiel fil on fic.id_fiel=fil.id_fiel
+where fic.id_fiel not in(EXISTS(select fil2.id_fiel from fiel fil2
+								where fil2.nome_cargo in('Sacerdote',
+								'Bispo',
+								'Bispo Superior',
+								'Arcebispo'
+								)
+))
+
+
+select fil.id_fiel,fil.nome_fiel from fiel_cargo fic inner join fiel fil on fic.id_fiel=fil.id_fiel
+where fic.id_fiel not in(EXISTS(select fil2.id_fiel from fiel fil2
+                                                    inner join cargo car
+                                                    on fil2.id_cargo = car.id_cargo
+                                                    where car.nome_cargo in('Sacerdote',
+                                                    'Bispo',
+                                                    'Bispo Superior',
+                                                    'Arcebispo'
+                                                    )
+))

@@ -1,0 +1,21 @@
+select nome_fiel, logradouro_endereco, numero_endereco, complemento_endereco, bairro_endereco, cidade_endereco, uf_endereco, cep_endereco
+from fiel
+where id_templo = 1
+and emite_etiqueta = 'S'
+and registro_ativo = 'S'
+LIMIT 0,1
+
+select reg.nome_regiao, fil.id_grupo,gru.nome_grupo
+from fiel fil
+inner join templo tml on tml.id_templo = fil.id_templo
+left join regiao reg on reg.id_regiao = fil.id_regiao
+left join grupo gru on gru.id_grupo = fil.id_grupo
+where fil.id_templo = 1
+and fil.id_grupo = 24
+and emite_etiqueta = 'S'
+and fil.registro_ativo = 'S'
+and reg.registro_ativo = 'S'
+and gru.registro_ativo = 'S'
+
+and fil.id_grupo = 15
+GROUP by fil.id_grupo

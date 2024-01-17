@@ -1,0 +1,20 @@
+//11 é igual ao Templo HBS em Homologação
+//12 é igual ao Templo HBS em Produção
+
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario,id_regiao,id_grupo)
+values ('hbs.arcebispo@gmail.com','arcebispo',md5('nit!7304'),1,CURRENT_TIMESTAMP,4,12,' ',1,2);
+
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario)
+values ('hbs.expansao@gmail.com','Expansão',md5('gori@8378'),1,CURRENT_TIMESTAMP,4,12,' ');
+
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario)
+values ('hbs.presidente@gmail.com','Presidente',md5('lide#4375'),1,CURRENT_TIMESTAMP,4,12,' ');
+
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario)
+values ('hbs.financeiro@gmail.com','Financeiro',md5('sidr@0875'),1,CURRENT_TIMESTAMP,4,12,' ');
+
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario)
+values ('hbs.admistrativo@gmail.com','Administrativo',md5('buds!3489'),1,CURRENT_TIMESTAMP,4,12,' ');
+
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario,id_regiao,id_grupo,ativacao_usuario,aplicativo_usuario)
+values ('jdomingos','jdomingos',md5('fil7765'),1,CURRENT_TIMESTAMP,1,2,' ',1,2,6356,'S');

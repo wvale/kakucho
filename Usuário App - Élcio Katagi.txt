@@ -1,0 +1,2 @@
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario,ativacao_usuario,aplicativo_usuario)
+values ('elcio','hbs.elcio@gmail.com',md5('ody@7563'),1,CURRENT_TIMESTAMP,1,1,' ',8573,'S');

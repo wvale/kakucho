@@ -1,0 +1,11 @@
+SELECT fl.id_fiel, fl.nome_fiel, fl.email_fiel, gru.nome_grupo FROM `fiel` fl
+inner join grupo gru on gru.id_grupo = fl.id_grupo
+left join cargo car on car.id_cargo = fl.id_cargo
+WHERE fl.id_templo = 1
+and fl.id_cargo = 2
+
+SELECT fl.id_fiel, fl.nome_fiel, fl.email_fiel, fl.id_grupo, gru.nome_grupo, fl.id_cargo, car.nome_cargo FROM `fiel` fl
+inner join grupo gru on gru.id_grupo = fl.id_grupo
+left join cargo car on car.id_cargo = fl.id_cargo
+WHERE fl.id_templo = 1
+and fl.id_cargo >0

@@ -1,0 +1,8 @@
+SELECT id_usuario,nome_usuario FROM `usuario` WHERE `nome_usuario` = 'suzuki.budismo@gmail.com'
+
+insert into usuario(nome_usuario,email_usuario,senha_usuario,situacao_usuario,data_usuario,nivel_usuario,id_templo,foto_usuario)
+values ('seama.elcio@gmail.com','Elcio',md5('nit!1540'),1,CURRENT_TIMESTAMP,4,1,' ');
+
+update usuario
+set `senha_usuario` md5('nit!1540')
+where `id_usuario` = 17

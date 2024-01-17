@@ -1,0 +1,48 @@
+select
+f.id_fiel,
+f.id_templo,
+nome_templo,
+f.nome_fiel,
+f.sobrenome_fiel,
+date_format(f.data_nascimento_fiel,'%d/%m/%Y') as vdata_nascimento_fiel,
+f.genero_fiel,
+f.rg_fiel,
+f.data_emissao_rg_fiel,
+f.orgao_emissor_rg,
+f.cpf_fiel,
+f.tel_residencial_fiel,
+f.tel_comercial_fiel,
+f.ramal_fiel,
+f.tel_celular_fiel,
+date_format(f.data_falecimento_fiel,'%d/%m/%Y')as vdata_falecimento_fiel,
+nome_profissao_fiel as nome_profissao,
+f.email_fiel,
+date_format(f.data_conversao_fiel,'%d/%m/%Y') as vdata_conversao_fiel,
+f.padrinho_madrinha_fiel,
+date_format(f.data_desligamento_fiel,'%d/%m/%Y') as vdata_desligamento_fiel,
+f.observacao_fiel,
+f.emite_etiqueta,
+f.id_grupo,
+nome_grupo,
+f.id_regiao,
+nome_regiao,	   
+f.logradouro_endereco,
+f.numero_endereco,
+f.complemento_endereco,
+f.bairro_endereco,
+f.cidade_endereco,
+f.uf_endereco,
+f.cep_endereco,
+f.situacao_fiel,
+f.estado_civil_fiel,
+f.id_regiao,
+f.id_cargo,
+f.id_departamento,
+f.nomesocial,
+f.chefefamilia
+FROM fiel f
+LEFT JOIN profissao_fiel p ON p.id_profissao_fiel = f.id_profissao_fiel
+LEFT JOIN fiel f2 ON f2.id_fiel = f.padrinho_madrinha_fiel
+LEFT JOIN templo t ON t.id_templo = f.id_templo
+LEFT JOIN regiao r ON r.id_regiao = f.id_regiao
+LEFT JOIN grupo g ON g.id_grupo = f.id_grupo

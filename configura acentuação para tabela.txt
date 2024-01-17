@@ -1,0 +1,1 @@
+ALTER DATABASE `fiel`CHARSET = Latin1 COLLATE = latin1_swedish_ci;

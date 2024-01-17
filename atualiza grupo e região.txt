@@ -1,0 +1,43 @@
+update fieltmp tmp
+inner join grupo gr on tmp.Grupo = gr.nome_grupo
+left join tmp.Regiao = gr.id_regiao --rever join - deve utilizar a tabela região
+set tmp.id_grupo = gr.id_grupo
+where gr.id_templo = 1
+and tmp.id_grupo = gr.id_grupo;
+
+
+select `Nome`,`Sobrenome`,`Templo`,`Regiao`,`Grupo` from fieltmp tmp
+inner join templo tml on tmp.Templo = tml.id_templo
+left join grupo gr on tmp.Grupo = gr.nome_grupo
+left join regiao reg on tmp.Regiao = reg.id_regiao
+where tmp.Templo = 1;
+
+
+select Codigo, `Nome`,`Sobrenome`,`Templo`,reg.nome_regiao, tmp.id_regiao, gr.nome_grupo, tmp.id_grupo from fieltmp tmp
+inner join templo tml on tmp.Templo = tml.id_templo
+left join regiao reg on tmp.Regiao = reg.id_regiao
+left join grupo gr on tmp.Grupo = gr.nome_grupo
+where tmp.Templo = 1
+and reg.id_templo=1
+and gr.id_templo=1;
+
+update fieltmp tmp
+inner join regiao reg on tmp.Regiao = reg.nome_regiao
+set tmp.id_regiao = reg.id_regiao
+where templo=1;
+
+update fieltmp tmp
+inner join grupo gru on tmp.Grupo = gru.nome_grupo
+left  join regiao reg on reg.id_templo = gru.id_templo
+set tmp.id_grupo = gru.id_grupo
+where templo=1
+
+select * FROM `fieltmp` WHERE Templo = 1;
+
+delete FROM `fieltmp` WHERE Templo = 1;
+delete from fiel where id_templo = 1;
+
+select count(*) FROM `fieltmp` WHERE Templo = 1;
+SELECT * FROM `fieltmp` WHERE Templo=1 and `Sobrenome`like '%souza%'
+
+INSERT INTO `fieltmp` (`Codigo`, `Templo`, `Sobrenome`, `Nome`, `NomeSocial`, `Regiao`, `Grupo`, `Endereco`, `Numero`, `Complemento`, `Bairro`, `Cidade`, `Estado`, `Foneres`, `Fonecel`, `Cep`, `DataNasc`, `DataConv`, `Sexo`, `TipoGohonzon`, `Padrinho`, `Profissao`, `EstadoCivil`, `Departamento`, `FielMantenedor`, `Cargo1`, `Cargo2`, `EmiteEtiqueta`, `ChefeFam`, `eMail`, `DataDeslig`, `DataFalec`, `DataInclusao`, `OBS`, `id_cargo`, `id_grupo`, `id_profissao_fiel`) VALUES

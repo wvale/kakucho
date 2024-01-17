@@ -1,0 +1,1 @@
+ALTER TABLE `fiel` CHANGE `padrinho_madrinha_fiel` `padrinho_madrinha_fiel` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL COMMENT 'Padrinho ou Madrinha do Fiel';

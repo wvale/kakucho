@@ -1,0 +1,17 @@
+			SELECT 
+				f.*,
+				f2.nome_fiel AS nome_padrinho,
+				p.nome_profissao_fiel AS nome_profissao,
+				t.nome_templo,
+				r.nome_regiao,
+				DATE_FORMAT(f.data_nascimento_fiel, '%d/%m/%Y') AS vdata_nascimento_fiel,
+				DATE_FORMAT(f.data_emissao_rg_fiel, '%d/%m/%Y') AS vdata_emissao_rg_fiel,
+				DATE_FORMAT(f.data_falecimento_fiel, '%d/%m/%Y') AS vdata_falecimento_fiel,
+				DATE_FORMAT(f.data_conversao_fiel, '%d/%m/%Y') AS vdata_conversao_fiel,
+				DATE_FORMAT(f.data_desligamento_fiel, '%d/%m/%Y') AS vdata_desligamento_fiel
+			FROM fiel f
+			LEFT JOIN profissao_fiel p ON p.id_profissao_fiel = f.id_profissao_fiel
+			LEFT JOIN fiel f2 ON f2.id_fiel = f.padrinho_madrinha_fiel
+			LEFT JOIN templo t ON t.id_templo = f.id_templo 
+			LEFT JOIN regiao r ON r.id_regiao = f.id_regiao
+			ORDER BY f.id_fiel DESC

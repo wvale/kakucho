@@ -1,0 +1,43 @@
+nome_fiel,
+sobrenome_fiel,
+nomesocial,
+nome_templo,
+nome_grupo, 
+nome_cargo, 
+departamento,
+data_nascimento_fiel,
+genero_fiel,
+tel_residencial_fiel,
+tel_celular_fiel,
+data_falecimento_fiel,
+email_fiel,
+data_conversao_fiel,
+padrinho_madrinha_fiel,
+data_desligamento_fiel,
+logradouro_endereco,
+numero_endereco,
+complemento_endereco,
+bairro_endereco,
+cidade_endereco,
+nome_estado,
+cep_endereco,
+emite_etiqueta',
+estado_civil_fiel,
+chefefamilia,
+DataInclusao,
+DataAlteracao,
+observacao_fiel
+
+FROM `fiel` fil
+inner join templo tem on tem.id_templo = fil.id_templo
+left join regiao reg on reg.id_regiao = fil.id_regiao
+left join grupo gru on gru.id_grupo = fil.id_grupo
+left join cargo car on car.id_cargo = fil.id_cargo
+left join associacao ass on ass.id_associacao = id_departamento
+left join profissao_fiel pro on pro.id_profissao_fiel = fil.id_profissao_fiel
+left join estado est on est.estado = fil.`uf_endereco`
+WHERE fil.id_templo = 8
+and   reg.nome_regiao <> '0'
+and   data_falecimento_fiel = '0000-00-00 00:00:00'
+and   fil.registro_ativo = 'S'
+order by fil.nome_fiel
